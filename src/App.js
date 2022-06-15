@@ -1,5 +1,17 @@
 import React from "react";
+import Counter from "./components/Counter";
+import logo from './logo.svg';
 
-export default function App() {
-  return <h1>Hello World</h1>;
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <h1>Webpack Tutorial</h1>
+        <Counter />
+        <img src={logo} className="App-logo" alt="logo" />
+      </header>
+    </div>
+  );
 }
+
+export default App;
