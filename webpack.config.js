@@ -4,18 +4,16 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   entry: "/src/index.js",
   output: { path: path.resolve(__dirname, "dist") },
-  // devServer: {
-  //   publicPath: "/",
-  //   contentBase: "./dist",
-  //   hot: true,
-  //   open: true,
-  //   watchOptions: {
-  //     ignored: /node_modules/,
-  //     poll: 1000,
-  //   },
-  //   port: 9000,
-  //   historyApiFallback: true,
-  // },
+  devServer: {
+    static: {
+      directory: path.resolve(__dirname, "dist"),
+    },
+    hot: true,
+    open: true,
+    port: 3000,
+    compress: true,
+    historyApiFallback: true,
+  },
   module: {
     rules: [
       {
